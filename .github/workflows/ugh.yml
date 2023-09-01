@@ -14,4 +14,4 @@ jobs:
       - name: 1st step
         uses: actions/checkout@master
         with:
-          repository: orgname/reponame
+          repository: mvdebolskiy/GEO4902
