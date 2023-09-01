@@ -11,6 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: 0st step
+        uses: actions/checkout@master
       - name: 1st step
         uses: actions/checkout@master
         with:
@@ -32,6 +34,8 @@ jobs:
       - name: workaround for permission denied problem 
         run: |
           sudo chown -R $USER:$USER .
+      - name: delete notebooks
+        run: rm -rf ./notebooks
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
