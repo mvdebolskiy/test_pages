@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: 0st step
         uses: actions/checkout@master
+      - name: gche
+        run: git checkout -b iss53
       - name: 1st step
         uses: actions/checkout@master
         with:
@@ -42,4 +44,4 @@ jobs:
           commit-message: Pull request with the Convreted markdown files
           title: Convert file from .ipynb to .md 
           body: This is an auto-generated PR
-          branch: main
+          branch: md
