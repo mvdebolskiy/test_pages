@@ -34,7 +34,9 @@ jobs:
           output_type: markdown
           output_dir: '../_episodes/'
       - name: cd back
-        run: cd ../
+        run: |
+         cd ../_episodes/ 
+         ls
       - name: workaround for permission denied problem 
         run: |
           sudo chown -R $USER:$USER .
