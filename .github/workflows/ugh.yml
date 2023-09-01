@@ -15,3 +15,5 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: mvdebolskiy/GEO4902
+      - name: check
+        run: ls
