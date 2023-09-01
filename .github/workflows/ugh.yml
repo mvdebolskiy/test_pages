@@ -42,7 +42,4 @@ jobs:
         run: rm -rf ./notebooks
       - name: push md
         run: |
-            git remote -v
-            git fetch
-            git push --set-upstream origin
             git push --all --force
