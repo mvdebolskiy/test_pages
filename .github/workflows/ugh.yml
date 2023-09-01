@@ -41,7 +41,10 @@ jobs:
       - name: delete notebooks
         run: |
           rm -rf ./notebooks
+          git config --global user.email "nomatdebol@gmail.com"
+          git config --global user.name "mvdebolskiy"
           git commit -a
+          
       - name: push md
         run: |
             git push --all --force
