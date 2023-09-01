@@ -15,9 +15,8 @@ jobs:
         uses: actions/checkout@master
       - name: gche
         run: |
-          git checkout -b iss53
           git fetch
-          git branch --set-upstream-to=origin/iss53 iss53
+          git checkout -b origin/iss53
       - name: 1st step
         uses: actions/checkout@master
         with:
@@ -46,4 +45,4 @@ jobs:
             git remote -v
             git fetch
             git pull
-            git push origin iss53:iss53
+            git push 
