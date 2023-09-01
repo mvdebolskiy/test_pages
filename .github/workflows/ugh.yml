@@ -17,4 +17,21 @@ jobs:
           repository: mvdebolskiy/GEO4902
           path: ./notebooks
       - name: check
-        run: ls
+        run: cd ./notebooks
+      - name: autopy-lot 
+        uses: deep5050/autopy-lot@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          check: all
+          input_type: ipynb
+          split_at_heading: true
+          output_type: markdown
+          output_dir: '../_episodes/'
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Pull request with the Convreted markdown files
+          committer: Mohamed Elashri <MohamedElashri@users.noreply.github.com>
+          title: Convert file from .ipynb to .md 
+          body: This is an auto-generated PR
+          branch: md
