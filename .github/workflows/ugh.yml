@@ -16,6 +16,7 @@ jobs:
       - name: gche
         run: |
           git checkout -b iss53
+          git fetch
           git branch --set-upstream-to=origin/iss53 iss53
       - name: 1st step
         uses: actions/checkout@master
