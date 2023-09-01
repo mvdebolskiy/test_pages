@@ -27,6 +27,8 @@ jobs:
           split_at_heading: true
           output_type: markdown
           output_dir: '../_episodes/'
+      - name: cd back
+        run: cd ../
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
