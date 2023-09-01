@@ -15,5 +15,6 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: mvdebolskiy/GEO4902
+          path: ./notebooks
       - name: check
         run: ls
