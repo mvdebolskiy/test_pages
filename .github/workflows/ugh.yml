@@ -22,5 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Check out my other private repo
+        uses: actions/checkout@master
+        with:
+          repository: orgname/reponame
