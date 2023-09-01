@@ -39,8 +39,8 @@ jobs:
           output_dir: '../_episodes/'
       - name: cd back
         run: |
-         cd ../_episodes/ 
-         ls
+             cd ..
+             ls
       - name: workaround for permission denied problem 
         run: |
           sudo chown -R $USER:$USER .
