@@ -29,4 +29,3 @@ jobs:
       - uses: actions/checkout@master
         with:
           name: mvdebolskiy/GEO4902    <-- clone https://github.com/org1/repo1
-          ref: refs/heads/release
