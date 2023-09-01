@@ -38,10 +38,5 @@ jobs:
           sudo chown -R $USER:$USER .
       - name: delete notebooks
         run: rm -rf ./notebooks
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: Pull request with the Convreted markdown files
-          title: Convert file from .ipynb to .md 
-          body: This is an auto-generated PR
-          branch: md
+      - name: push md
+        run: git push origin/iss53
