@@ -23,8 +23,3 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      -name: check out another repo
-      - uses: actions/checkout@master
-        with:
-          name: mvdebolskiy/GEO4902    <-- clone https://github.com/org1/repo1
