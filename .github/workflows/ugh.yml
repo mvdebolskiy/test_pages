@@ -45,4 +45,4 @@ jobs:
             git remote -v
             git fetch
             git push --set-upstream origin origin/iss53
-            git push --all
+            git push --all --no-rebase
