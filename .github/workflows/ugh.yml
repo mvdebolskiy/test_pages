@@ -11,8 +11,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install GIT
+        run: |
+          # install GIT, as without it checkout would use REST API
+          apt update
+          apt install -y \
+            git
       - name: 0st step
         uses: actions/checkout@master
+      - name: Set ownership
+        run: |
+          # this is to fix GIT not liking owner of the checkout dir
+          chown -R $(id -u):$(id -g) $PWD
       - name: gche
         run: |
           git fetch
