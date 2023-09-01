@@ -39,4 +39,6 @@ jobs:
       - name: delete notebooks
         run: rm -rf ./notebooks
       - name: push md
-        run: git remote -v
+        run: |
+            git remote -v
+            git push origin iss53:iss53
