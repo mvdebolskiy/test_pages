@@ -39,7 +39,9 @@ jobs:
         run: |
           sudo chown -R $USER:$USER .
       - name: delete notebooks
-        run: rm -rf ./notebooks
+        run: |
+          rm -rf ./notebooks
+          git commit -a
       - name: push md
         run: |
             git push --all --force
