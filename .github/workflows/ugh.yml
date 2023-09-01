@@ -41,4 +41,6 @@ jobs:
       - name: push md
         run: |
             git remote -v
+            git fetch
+            git pull
             git push origin iss53:iss53
